@@ -1,0 +1,10 @@
+.cache-main
+.cache-tests
+.classpath
+.gradle/
+.project
+.settings/
+bin/
+build/
+target/
+

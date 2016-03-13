@@ -1,0 +1,62 @@
+/*
+    gradle compileScala
+    gradle compileTestScala
+    gradle compileSourceSetScala
+    gradle scaladoc
+    gradle build
+    gradle run
+*/
+
+apply plugin: 'scala'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+repositories { jcenter() }
+
+dependencies {
+    compile "org.scala-lang:scala-library:$scalaVer",
+            "org.slf4j:slf4j-api:$slf4jVer"
+    
+    testCompile "org.scala-lang:scala-library:$scalaVer",
+                "org.slf4j:slf4j-api:$slf4jVer",
+                "junit:junit:$jUnitVer",
+                "org.scalactic:scalactic_$scalatestVer",
+                "org.scalatest:scalatest_$scalatestVer",
+                "org.specs2:specs2_$specs2Ver"
+}
+
+test {
+    systemProperties 'property': 'value'
+}
+
+sourceSets {
+    main {
+        scala {
+            srcDirs = ['src/main/scala']
+        }
+    }
+    test {
+        scala {
+            srcDirs = ['src/test/scala']
+        }
+    }
+}
+
+task run(type: JavaExec, dependsOn: classes) {
+    main = 'app.Main'
+    classpath sourceSets.main.runtimeClasspath,
+              configurations.runtime
+}
+/*
+compileScala {
+    scalaCompileOptions.useCompileDaemon = true
+    //// optionally specify host and port of the daemon:
+    //scalaCompileOptions.daemonServer = "localhost:4243"
+}
+*/
+tasks.withType(ScalaCompile) {
+    configure(scalaCompileOptions.forkOptions) {
+        memoryMaximumSize = '1g'
+        jvmArgs = ['-XX:MaxPermSize=512m']
+    }
+}
