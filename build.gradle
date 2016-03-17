@@ -9,7 +9,8 @@ repositories { jcenter() }
 dependencies {
     compile "org.scala-lang:scala-library:$scalaVer",
             "org.slf4j:slf4j-api:$slf4jVer",
-            "org.scala-js:scalajs-library_$scalaJsVer"
+            "org.scala-js:scalajs-library_$scalaJsVer"/* ,
+            "org.scala-js:scalajs-compiler_$scalaJsVer" */
     
     testCompile "org.scala-lang:scala-library:$scalaVer",
                 "org.slf4j:slf4j-api:$slf4jVer",

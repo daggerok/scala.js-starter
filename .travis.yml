@@ -5,7 +5,7 @@ scala: 2.11
 jdk: oraclejdk8
 script:
   - gradle clean test run
-  - sbt ++$TRAVIS_SCALA_VERSION clean test run
+  - sbt $TRAVIS_SCALA_VERSION clean test run
 cache:
   directories:
     - $HOME/.gradle
