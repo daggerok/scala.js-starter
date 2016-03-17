@@ -25,5 +25,3 @@ libraryDependencies += "org.specs2" % "specs2_2.11" % "3.7"
 libraryDependencies += "org.scala-tools.testing" % "scalacheck" % "1.6"
 
 scalacOptions in Test ++= Seq("-Yrangepos")
-
-resolvers += "Restlet Repositories" at "http://maven.restlet.org"
