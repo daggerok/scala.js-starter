@@ -23,28 +23,8 @@ test {
     systemProperties 'property': 'value'
 }
 
-sourceSets {
-    main {
-        scala {
-            srcDirs = ['src/main/scala']
-        }
-    }
-    test {
-        scala {
-            srcDirs = ['src/test/scala']
-        }
-    }
-}
-
 task run(type: JavaExec, dependsOn: classes) {
     main = 'webapp.Main'
     classpath sourceSets.main.runtimeClasspath,
               configurations.runtime
-}
-
-tasks.withType(ScalaCompile) {
-    configure(scalaCompileOptions.forkOptions) {
-        memoryMaximumSize = '1g'
-        jvmArgs = ['-XX:MaxPermSize=512m']
-    }
 }
