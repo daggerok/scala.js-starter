@@ -7,4 +7,5 @@
 bin/
 build/
 target/
-
+!project/build.properties
+!project/plubins.sbt

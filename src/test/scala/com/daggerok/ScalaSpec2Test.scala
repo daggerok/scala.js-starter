@@ -1,11 +1,11 @@
-package org.gradle
+package com.daggerok
 
 import org.specs2.Specification
 import org.specs2.ScalaCheck
 import org.junit.runner.RunWith
 import org.specs2.runner.JUnitRunner
 
-import Calc._
+import com.daggerok.Calc._
 
 @RunWith(classOf[JUnitRunner])
 class ScalaSpec2Test extends Specification {

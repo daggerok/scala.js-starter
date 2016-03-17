@@ -3,9 +3,6 @@ language:
   - java
 scala: 2.11
 jdk: oraclejdk8
-script: gradle clean build
-cache:
-  directories:
-    - $HOME/.gradle/
-    - .gradle/
-
+script:
+  - gradle clean test run
+  - sbt clean test run

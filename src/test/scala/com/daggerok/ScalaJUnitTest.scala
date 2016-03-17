@@ -1,9 +1,9 @@
-package org.gradle
+package com.daggerok
 
 import org.junit.Test
 import org.junit.Assert._
 
-import Calc._
+import com.daggerok.Calc._
 
 class ScalaJUnitTest {
   @Test def testAdd() {
