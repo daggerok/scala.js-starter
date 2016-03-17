@@ -6,3 +6,11 @@ jdk: oraclejdk8
 script:
   - gradle clean test run
   - sbt clean test run
+cache:
+  directories:
+    - $HOME/.gradle
+    - .gradle
+    - $HOME/.m2/repository
+    - $HOME/.sbt
+    - $HOME/.ivy2
+    - project/target
