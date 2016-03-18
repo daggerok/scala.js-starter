@@ -1,4 +1,4 @@
-/* gradle clean test run */
+// gradle clean test run
 
 apply plugin: 'scala'
 apply plugin: 'eclipse'
@@ -9,12 +9,10 @@ repositories { jcenter() }
 dependencies {
     compile "org.scala-lang:scala-library:$scalaVer",
             "org.slf4j:slf4j-api:$slf4jVer",
-            "org.scala-js:scalajs-library_$scalaJsVer"/* ,
-            "org.scala-js:scalajs-compiler_$scalaJsVer" */
+            // "org.scala-js:scalajs-compiler_$scalaJscVer"
+            "org.scala-js:scalajs-library_$scalaJslVer"
     
-    testCompile "org.scala-lang:scala-library:$scalaVer",
-                "org.slf4j:slf4j-api:$slf4jVer",
-                "junit:junit:$jUnitVer",
+    testCompile "junit:junit:$jUnitVer",
                 "org.scalactic:scalactic_$scalatestVer",
                 "org.scalatest:scalatest_$scalatestVer",
                 "org.specs2:specs2_$specs2Ver"
@@ -25,7 +23,7 @@ test {
 }
 
 task run(type: JavaExec, dependsOn: classes) {
-    main = 'webapp.Main'
+    main = 'com.daggerok.scalajs.web.Main'
     classpath sourceSets.main.runtimeClasspath,
               configurations.runtime
 }

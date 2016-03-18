@@ -1,9 +1,9 @@
-package com.daggerok
+package com.daggerok.scalajs.math
 
 import org.junit.Test
 import org.junit.Assert._
 
-import com.daggerok.Calc._
+import com.daggerok.scalajs.math.Calc._
 
 class ScalaJUnitTest {
   @Test def testAdd() {

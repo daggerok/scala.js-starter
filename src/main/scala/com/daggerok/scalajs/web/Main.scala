@@ -1,15 +1,15 @@
-package webapp
+package com.daggerok.scalajs.web
 
-import com.daggerok.Calc._
+import com.daggerok.scalajs.math.Calc._
 import scala.scalajs.js.JSApp
 
 // gradle run
 object Main extends App {
-  WebApp.main()
+  App.main()
 }
 
 // sbt run
-object WebApp extends JSApp {
+object App extends JSApp {
   def main(): Unit = {
     println(s"""
 

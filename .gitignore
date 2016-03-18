@@ -1,11 +1,10 @@
-.cache-main
-.cache-tests
+.cache*
 .classpath
 .gradle/
-.project
 .settings/
 bin/
 build/
 target/
+.project
 !project/build.properties
 !project/plubins.sbt

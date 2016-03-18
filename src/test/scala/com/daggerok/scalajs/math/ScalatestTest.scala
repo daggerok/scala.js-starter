@@ -1,10 +1,10 @@
-package com.daggerok
+package com.daggerok.scalajs.math
 
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
 import org.scalatest.BeforeAndAfter
 import org.scalatest.junit.JUnitRunner
-import com.daggerok.Calc._
+import com.daggerok.scalajs.math.Calc._
 
 @RunWith(classOf[JUnitRunner])
 class ScalatestTest extends FunSuite with BeforeAndAfter {
