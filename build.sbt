@@ -12,8 +12,6 @@ libraryDependencies += "org.scala-lang" % "scala-library" % "2.11.7"
 
 libraryDependencies += "org.slf4j" % "slf4j-api" % "1.7.19"
 
-// libraryDependencies += "org.scala-js" % "scalajs-compiler_2.11.0" % "0.6.7"
-
 libraryDependencies += "org.scala-js" % "scalajs-library_2.11" % "0.6.7"
 
 libraryDependencies += "junit" % "junit" % "4.12"
