@@ -8,3 +8,5 @@ target/
 .project
 !project/build.properties
 !project/plubins.sbt
+project/
+src/main/webapp/

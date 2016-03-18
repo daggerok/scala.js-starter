@@ -17,7 +17,7 @@ object App extends JSApp {
 
       anyway, I have to tell you this!
 
-      1 + 2 = ${add(1,2)} 
+      1 + 2 = ${add(1, 2)} 
 
       :)
       

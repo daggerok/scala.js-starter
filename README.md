@@ -6,13 +6,8 @@ Scala.js web application starter
 - using gradle
 
 ```sh
-gradle clean test run
-```
-
-- using sbt
-
-```sh
-sbt clean test run
+grale clean jettyRun # gradle clean test run
+open http://localhost:8080/gradle-scala.js
 ```
 
 Links:
